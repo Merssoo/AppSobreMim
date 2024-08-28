@@ -1,0 +1,258 @@
+:root {
+  --text-color: white;
+  --button-back: white;
+  --hover-back: black;
+  --hover-social: white;
+  --but-back: white;
+  --image-back: url(./image/moon-outline.svg);
+  --background-color-hover: rgb(0, 6, 14);
+  --border-color: rgb(205, 227, 255);
+}
+
+.luz {
+  --text-color: black;
+  --button-back: black;
+  --hover-back: white;
+  --hover-social: black;
+  --but-back: black;
+  --image-back: url(./image/sunny-outline.svg);
+  --background-color-hover: rgb(205, 227, 255);
+  --border-color: rgb(0, 6, 14)
+}
+
+body {
+  background-color: rgb(0, 6, 14)
+}
+
+.luz body {
+  background-color: rgb(205, 227, 255);
+}
+
+#contanier {
+  width: 300px;
+  margin: auto;
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  width: 150px;
+  /* Largura fixa */
+  height: 150px;
+  /* Altura fixa */
+  border: 2px solid;
+  border-radius: 50%;
+  /* Faz a imagem ficar redonda */
+  margin: auto;
+  object-fit: cover;
+}
+
+p {
+  text-align: center;
+}
+
+#but {
+  position: relative;
+  width: 64px;
+  margin: auto;
+}
+
+button {
+  width: 25px;
+  height: 25px;
+  background-image: var(--image-back);
+  border-radius: 50px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  animation: slide-vol 0.4s forwards;
+}
+
+.luz #but button {
+  animation: slide 0.4s forwards;
+}
+
+span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  border: 2px solid;
+  border-color: var(--button-back);
+  border-radius: 15px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.link {
+  width: 100px;
+  margin-left: 98px;
+}
+
+ul a {
+  border: 2px solid;
+  border-color: var(--button-back);
+  border-radius: 10px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+  transition: background 0.5s;
+}
+
+.texto {
+  width: 400px;
+  margin-left: -55px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  border: 2px solid;
+  border-color: var(--button-back);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s;
+}
+
+ol {
+  margin-left: -24px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  background-color: gray;
+  border: solid 2px;
+  border-color: var(--hover-back);
+}
+
+#social {
+  display: flex;
+  gap: 16px;
+  padding: 10px;
+  font-size: 30px;
+  justify-content: center;
+}
+
+#social a {
+  display: flex;
+  transition: background 0.5s;
+}
+
+#social a:hover {
+  border-radius: 50px;
+  padding: 5px;
+  border: solid 2px;
+  border-color: var(--hover-social);
+}
+
+#rodape p {
+  padding-bottom: 25px;
+}
+
+.container-contato {
+  width: 400px;
+  margin-left: -55px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  border: 2px solid;
+  border-color: var(--button-back);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 2px solid var(--border-color) !important;
+}
+
+.button-contato {
+  border: 2px solid var(--border-color) !important;
+  display: block;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  background-image: none;
+  position: relative;
+  margin: auto;
+  animation: none;
+}
+
+input:focus,
+textarea:focus,
+.button-contato:hover {
+  background-color: var(--background-color-hover);
+  color: var(--hover-social);
+  border-color: var(--hover-back);
+  transition: all 0.3s ease;
+}
+
+@keyframes slide {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: 65%;
+  }
+
+}
+
+@keyframes slide-vol {
+  from {
+    left: 65%;
+  }
+
+  to {
+    left: 0%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
